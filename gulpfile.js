@@ -36,12 +36,14 @@ var paths = {
   , './assets/bower_components/momentjs/min/moment.min.js'
   , './assets/bower_components/jquery-ui/ui/minified/jquery-ui.min.js'
   , './assets/bower_components/dropzone/downloads/dropzone.min.js'
+  , './assets/bower_components/rivets/dist/rivets.js'
 
 
     // Internal libraries
-  , './assets/js/libs/jquery.formwarden.js'
-  , './assets/js/libs/formwarden.js'
-  , './assets/js/libs/wb.js'
+  // , './assets/js/libs/jquery.formwarden.js'
+  // , './assets/js/libs/formwarden.js'
+  , './assets/js/libs/stately.js'
+  // , './assets/js/libs/wb.js'
   ],
 
   scripts: [

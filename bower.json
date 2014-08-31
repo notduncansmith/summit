@@ -23,6 +23,7 @@
     "es5-shim": "~4.0.3",
     "respond": "~1.4.2",
     "fastclick": "~1.0.3",
-    "lodash": "~2.4.1"
+    "lodash": "~2.4.1",
+    "rivets": "~0.6.10"
   }
 }
