@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Send Medical Images</title>
+  <link rel="stylesheet" href="/css/app.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
+</head>
+<body>
+
+  <div class="container main">
+    {{#block "body"}}{{/block}}
+  </div>
+
+  <div id="templates">
+    {{{appTemplates}}}
+  </div>
+  
+  
+  {{#block "scripts"}}
+    <script src="/js/vendor.js"></script>
+    <script src="/js/app.js" type="text/wreq"></script>
+    {{#if env.dev}}
+      <script>
+      if (!window.isIE8){
+        document.write('<script src="//{{env.host}}:35729/livereload.js?snipver=1"></' + 'script>');
+      }
+      </script>
+    {{/if}}
+  {{/block}}
+</body>
+</html>

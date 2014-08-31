@@ -1,0 +1,28 @@
+{
+  "name": "cms",
+  "version": "0.0.0",
+  "authors": [
+    "Duncan Smith <hello@duncanmsmith.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "trails": "~0.3.0",
+    "lesshat": "~3.0.2",
+    "bootstrap": "~3.2.0",
+    "moment": "~2.8.2",
+    "jquery-ui": "~1.11.1",
+    "dropzone": "~3.10.2",
+    "es5-shim": "~4.0.3",
+    "respond": "~1.4.2",
+    "fastclick": "~1.0.3",
+    "lodash": "~2.4.1"
+  }
+}
