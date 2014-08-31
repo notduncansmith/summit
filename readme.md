@@ -1,7 +1,3 @@
-
-
-
-
 Buckets - post templates
 Posts - units of buckets
 
@@ -59,4 +55,3 @@ Pages
 
 
 Collections have an "Is Post Type" property, which determines whether or not they will appear in the "Blog post" view
-
