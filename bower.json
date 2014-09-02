@@ -24,6 +24,7 @@
     "respond": "~1.4.2",
     "fastclick": "~1.0.3",
     "lodash": "~2.4.1",
-    "rivets": "~0.6.10"
+    "rivets": "~0.6.10",
+    "slugify": "~1.0.2"
   }
 }
