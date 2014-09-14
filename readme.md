@@ -215,7 +215,7 @@ This method will return a router that automatically handles the following action
 
 WB-CMS will use whatever layout you pass in to render those form-fields automatically.
 
-This option is fine for quickly bootstrapping a project, but is not recommended long-term.
+This option is fine for quickly bootstrapping a project, but is *not recommended for production use*.
 
 **A note on forms: WB-CMS uses Bootstrap-compatible markup when generating forms.**
 
