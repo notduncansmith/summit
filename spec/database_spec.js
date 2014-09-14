@@ -1,14 +1,17 @@
 var Database = require('../lib/db')
-  , db = new Database({host: 'localtest', port: '1234', name: 'test'});
+  , db = new Database({host: 'localhost', port: '5384', name: 'test'})
+  , Promise = require('bluebird');
 
 describe('The database wrapper', function () {
   it('should offer a method called get', function () {
     expect(db.get).toEqual(jasmine.any(Function));
     
     describe('The get method', function () {
+      var getResults;
+
       beforeEach(function () {
         spyOn(db.db, 'get').andCallThrough();
-        db.get('foo');
+        getResult = db.get('foo');
       });
       
       it('should fetch a doc from the database', function () {
@@ -16,7 +19,7 @@ describe('The database wrapper', function () {
       });
 
       it('should return a promise', function () {
-        expect(db.get().then).toEqual(jasmine.any(Function));
+        expect(getResult).toEqual(jasmine.any(Promise));
       });
     });
   });
@@ -29,11 +32,12 @@ describe('The database wrapper', function () {
       var testDoc = {
         foo: 'bar'
       };
-      var testDocName = 'bar';
+      var testDocName = 'bar'
+        , putResults;
 
       beforeEach(function () {
         spyOn(db.db, 'insert').andCallThrough();
-        db.put(testDocName, testDoc);
+        putResults = db.put(testDocName, testDoc);
       });
       
       it('should insert a doc with the given name into the database', function () {
@@ -41,7 +45,7 @@ describe('The database wrapper', function () {
       });
 
       it('should return a promise', function () {
-        expect(db.put().then).toEqual(jasmine.any(Function));
+        expect(putResults).toEqual(jasmine.any(Promise));
       });
     });
   });
@@ -64,6 +68,27 @@ describe('The database wrapper', function () {
 
       it('should be configured to use the specified name', function () {
         expect(newDb.config.name).toEqual(newName);
+      });
+    });
+  });
+
+  it('should offer a method called view', function () {
+    expect(db.view).toEqual(jasmine.any(Function));
+
+    describe('The view method', function () {
+      var viewResult;
+
+      beforeEach(function () {
+        spyOn(db.db, 'view');
+        viewResult = db.view('foo', 'bar');
+      });
+
+      it('should return a promise', function () {
+        expect(viewResult).toEqual(jasmine.any(Promise));
+      });
+
+      it('should ask nano for the view', function () {
+        expect(db.db.view).toHaveBeenCalledWith('foo', 'bar');
       });
     });
   });
