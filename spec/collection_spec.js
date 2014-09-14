@@ -25,7 +25,6 @@ describe('A Collection', function () {
 
     beforeEach(function () {
       form = Coll.form();
-      console.log(form)
     });
 
     it('returns a string', function () {
@@ -57,7 +56,7 @@ describe('A Collection', function () {
         return new Promise.reject(null);
       });
 
-      spyOn(fakeDb, 'put').andCallFake(console.log);
+      spyOn(fakeDb, 'put').andCallThrough();
 
       Coll.setup()
       .then(function () {
