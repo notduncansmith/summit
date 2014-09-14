@@ -23,18 +23,19 @@
   "dependencies": {
     "bogart-injector": "~0.2.1",
     "bogart": "git://github.com/notduncansmith/bogart#develop",
+    "bogart-handlebars": "~0.9.2",
     "lodash": "~2.4.1",
     "moment": "~2.6.0",
     "nano": "~5.11.0",
     "mandrill-api": "~1.0.40",
     "bcrypt": "~0.8.0",
-    "bogart-handlebars": "~0.9.2",
     "slug": "~0.5.0",
     "couch-push": "git://github.com/notduncansmith/couch-push#patch-1",
     "cheerio": "~0.17.0",
     "js-beautify": "~1.5.1",
     "inflection": "~1.4.2",
-    "bluebird": "~2.3.2"
+    "bluebird": "~2.3.2",
+    "node-uuid": "~1.4.1"
   },
   "license": "ISC"
 }
