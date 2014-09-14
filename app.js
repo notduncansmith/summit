@@ -1,5 +1,8 @@
 var CMS = require('./lib/cms');
 
-module.exports = function (config) {
-  return new CMS(config);
-}
+CMS.bogart = require('bogart-edge');
+CMS._ = require('lodash');
+CMS.inflection = require('inflection');
+CMS.Promise = require('bluebird');
+
+module.exports = CMS;
