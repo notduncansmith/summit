@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jasmine-node --color spec/",
     "autotest": "jasmine-node --color --autotest spec/",
+    "autotest": "jasmine-node --color --captureExceptions --autotest spec/",
     "push": "./node_modules/couch-push/cli.js http://localhost:5984/cms ./couch"
   },
   "author": "Duncan Smith",
@@ -31,6 +32,8 @@
     "bogart-handlebars": "~0.9.2",
     "slug": "~0.5.0",
     "couch-push": "git://github.com/notduncansmith/couch-push#patch-1"
+    "inflection": "~1.4.2",
+    "bluebird": "~2.3.2"
   },
   "license": "ISC"
 }
