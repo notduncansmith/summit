@@ -5,7 +5,6 @@
   "main": "app.js",
   "scripts": {
     "test": "jasmine-node --color spec/",
-    "autotest": "jasmine-node --color --autotest spec/",
     "autotest": "jasmine-node --color --captureExceptions --autotest spec/",
     "push": "./node_modules/couch-push/cli.js http://localhost:5984/cms ./couch"
   },
@@ -31,7 +30,9 @@
     "bcrypt": "~0.8.0",
     "bogart-handlebars": "~0.9.2",
     "slug": "~0.5.0",
-    "couch-push": "git://github.com/notduncansmith/couch-push#patch-1"
+    "couch-push": "git://github.com/notduncansmith/couch-push#patch-1",
+    "cheerio": "~0.17.0",
+    "js-beautify": "~1.5.1",
     "inflection": "~1.4.2",
     "bluebird": "~2.3.2"
   },
