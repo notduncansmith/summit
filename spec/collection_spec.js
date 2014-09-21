@@ -48,7 +48,9 @@ describe('A Collection', function () {
       var newDoc = {
         _id: "_design/cms-Foo",
         views: {
-          all: "function (doc) { if (doc.collection == 'Foo') { emit(doc.id, doc); } }"
+          all: {
+            map: "function (doc) { if (doc.collection == 'Foo') { emit(doc.id, doc); } }"
+          }
         }
       };
 

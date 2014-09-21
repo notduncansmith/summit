@@ -8,7 +8,7 @@ describe('The Item class', function () {
     var item, itemWithId;
     
     beforeEach(function () {
-      var coll = {name: 'Foo'};
+      var coll = {collection: {name: 'Foo'}};
 
       item = new Item({foo: 'bar'}, coll);
       itemWithId = new Item({foo: 'bar', _id: 'baz'}, coll);
@@ -34,7 +34,8 @@ describe('The Item class', function () {
   describe('has a method called raw, which', function () {
     var raw;
     beforeEach(function () {
-      var item = new Item({foo: 'bar'}, {name: 'Foo'});
+      var coll = {collection: {name: 'Foo'}};
+      var item = new Item({foo: 'bar'}, coll);
       raw = item.raw();
     });
 
@@ -52,7 +53,9 @@ describe('The Item class', function () {
   describe('has a method called save, which', function () {
     var results;
     var coll = {
-      name: 'Foo',
+      collection: {
+        name: 'Foo'
+      },
       db: {
         put: null
       }

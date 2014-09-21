@@ -15,7 +15,7 @@ describe('The database wrapper', function () {
       });
       
       it('should fetch a doc from the database', function () {
-        expect(db.db.get).toHaveBeenCalledWith('foo');
+        expect(db.db.get).toHaveBeenCalledWith('foo', jasmine.any(Function));
       });
 
       it('should return a promise', function () {
@@ -41,7 +41,7 @@ describe('The database wrapper', function () {
       });
       
       it('should insert a doc with the given name into the database', function () {
-        expect(db.db.insert).toHaveBeenCalledWith(testDoc, testDocName);
+        expect(db.db.insert).toHaveBeenCalledWith(testDoc, testDocName, jasmine.any(Function));
       });
 
       it('should return a promise', function () {
@@ -88,7 +88,7 @@ describe('The database wrapper', function () {
       });
 
       it('should ask nano for the view', function () {
-        expect(db.db.view).toHaveBeenCalledWith('foo', 'bar');
+        expect(db.db.view).toHaveBeenCalledWith('foo', 'bar', jasmine.any(Function));
       });
     });
   });
