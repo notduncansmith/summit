@@ -65,7 +65,7 @@ var fooBySlug = MyCollection.get('foo-is-a-bar');
 Want to do a search?  You got it:
 
 ```javascript
-var searchResults = MyCollection.searchFor('foo', 'bar');
+var searchResults = MyCollection.searchFor(['foo', 'bar']);
 ```
 
 Want pagination?  No problemo: 
@@ -73,7 +73,7 @@ Want pagination?  No problemo:
 ```javascript
 var pages = MyCollection.all().pages({size: 10})
 var pageTWoOfAll = MyCollection.all().page(2, {size: 10})
-var pageTwoOfSearch = MyCollection.searchFor('foo', 'bar').page(2, {size: 10})
+var pageTwoOfSearch = MyCollection.searchFor(['foo', 'bar']).page(2, {size: 10})
 ```
 
 This allows you to treat your data like data, and use it how you want to.
@@ -107,10 +107,6 @@ One might also consider having a "Laptop Reviews" link in the header, where a re
 
 By keeping these posts as Collections, we get the power to do that.  Each post is just data, and they're kept completely separate; however, by virtue of the isPostType flag, we also have an easy way to aggregate items from each of these Collections into a traditional blog post stream.
 
-**Posts are treated as Markdown.  As such, each Post's string attributes (aside from `_id` and `_rev` of course) are decorated with a method called `render`, which will send that field's contents through WB-CMS's Markdown engine[1].**
-
-
-[1]  This engine is Marked by default.  WB-CMS exposes the `render` property, which is just a function that should take a raw Markdwon string as input and return an HTML string as output.  
 
 ------
 
