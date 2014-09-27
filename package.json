@@ -9,8 +9,7 @@
     "push": "./node_modules/couch-push/cli.js http://localhost:5984/cms ./couch"
   },
   "author": "Duncan Smith",
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "dependencies": {
     "bogart-injector": "~0.2.1",
     "bogart": "git://github.com/notduncansmith/bogart#develop",
@@ -26,7 +25,8 @@
     "js-beautify": "~1.5.1",
     "inflection": "~1.4.2",
     "bluebird": "~2.3.2",
-    "node-uuid": "~1.4.1"
+    "node-uuid": "~1.4.1",
+    "mime": "~1.2.11"
   },
   "license": "ISC"
 }

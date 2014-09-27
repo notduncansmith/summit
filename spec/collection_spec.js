@@ -44,7 +44,7 @@ describe('A Collection', function () {
       });
     });
 
-    it('creates the database if the design doc does not exist', function (done) {
+    it('creates the design doc if it does not exist', function (done) {
       var newDoc = {
         _id: "_design/cms-Foo",
         views: {
@@ -62,7 +62,7 @@ describe('A Collection', function () {
 
       Coll.setup()
       .then(function () {
-       expect(fakeDb.put).toHaveBeenCalledWith('_design/cms-Foo', JSON.stringify(newDoc));
+       expect(fakeDb.put).toHaveBeenCalledWith('_design/cms-Foo', newDoc);
        done();
       });
     });
