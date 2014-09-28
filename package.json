@@ -25,7 +25,8 @@
     "inflection": "~1.4.2",
     "bluebird": "~2.3.2",
     "node-uuid": "~1.4.1",
-    "mime": "~1.2.11"
+    "mime": "~1.2.11",
+    "fbgraph": "~0.2.11"
   },
   "license": "ISC"
 }
