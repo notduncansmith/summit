@@ -1,6 +1,6 @@
 {
   "name": "dms",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Data management system",
   "main": "app.js",
   "scripts": {
@@ -28,5 +28,5 @@
     "mime": "~1.2.11",
     "fbgraph": "~0.2.11"
   },
-  "license": "ISC"
+  "license": "MIT"
 }
