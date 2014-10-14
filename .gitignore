@@ -2,3 +2,4 @@ assets/css/*.css
 node_modules/
 couch/
 local.sh
+npm-debug.log
