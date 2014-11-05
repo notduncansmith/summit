@@ -1,7 +1,7 @@
 {
-  "name": "dms",
-  "version": "0.0.8",
-  "description": "Data management system",
+  "name": "summit",
+  "version": "0.0.1",
+  "description": "A web framework for achievers",
   "main": "app.js",
   "scripts": {
     "test": "jasmine-node --color spec/",
@@ -12,7 +12,7 @@
   "devDependencies": {},
   "dependencies": {
     "bogart-injector": "~0.2.1",
-    "bogart-edge": "~0.7.3",
+    "bogart-edge": "0.7.3",
     "bogart-handlebars": "git://github.com/notduncansmith/bogart-handlebars#80293dd32a",
     "lodash": "~2.4.1",
     "moment": "~2.6.0",
