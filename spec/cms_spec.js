@@ -1,8 +1,8 @@
 var db = {}
-  , CMS = require('../lib/cms')
-  , Cms = new CMS({});
+  , Summit = require('../lib/summit')
+  , Cms = new Summit({});
 
-describe('The CMS module', function () {
+describe('The Summit module', function () {
   
   describe('Has a method called collection, which', function () {
     var doc = {name:'foo', foo: 'bar'}
