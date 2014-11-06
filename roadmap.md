@@ -162,44 +162,46 @@ Anything would be nice.
     - Collection class/instance methods
 
 # Skeleton
-.git/
-assets/
-  js/
-    app.js
-    libs/
-    src/
-  less/
-    _bootstrap.less
-    _type.less
-    _variables.less
-    app.less
-  css/
-    app.css
-  img/
-  favicon.ico
-lib/
-  collections/
-    page.js
-  routers/
-    page_router.js
-    user_router.js
-    admin_router.js
-  middleware/
-    page_variables.js
-node_modules/
-  summit/
-.bowerrc
-.gitignore
-app.js
-bower.json
-config.example.js
-config.js
-gulpfile.js
- - LESS (+ build)
- - JS (+ build)
- - Bootstrap JS
- - jQuery
- - Lodash
- - Sherpa
-package.json
-README.md
+```
+  .git/
+  assets/
+    js/
+      app.js
+      libs/
+      src/
+    less/
+      _bootstrap.less
+      _type.less
+      _variables.less
+      app.less
+    css/
+      app.css
+    img/
+    favicon.ico
+  lib/
+    collections/
+      page.js
+    routers/
+      page_router.js
+      user_router.js
+      admin_router.js
+    middleware/
+      page_variables.js
+  node_modules/
+    summit/
+  .bowerrc
+  .gitignore
+  app.js
+  bower.json
+  config.example.js
+  config.js
+  gulpfile.js
+   - LESS (+ build)
+   - JS (+ build)
+   - Bootstrap JS
+   - jQuery
+   - Lodash
+   - Sherpa
+  package.json
+  README.md
+```
