@@ -7,9 +7,17 @@ var dbConfig = {
 };
 
 var app = new Summit();
+var router = app.router();
 
-var useRouter = app.router().get('/used', function (req) {
+router.get('/used', function (req) {
   return Summit.cors({from: 'used'});
+});
+
+router.get('/api/post/:id', function (Post) {
+  return Post.get(req.params.id)
+  .then(function (post) {
+    return Summit.json(post);
+  });
 });
 
 app.router(true)
