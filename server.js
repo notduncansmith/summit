@@ -25,8 +25,6 @@ app.router(true)
   return Summit.text('Hello, world!');
 });
 
-app.use(useRouter);
-
 app.router(true).get('/:name', function (req) {
   var message = 'Hello ' + req.params.name;
   return Summit.json({message: message});
