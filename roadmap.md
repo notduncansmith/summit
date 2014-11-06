@@ -1,17 +1,18 @@
-Documentation
+# Documentation
+Anything would be nice.
 
-Yeoman Generators
-  - Skeleton
+# Yeoman Generators
+  - Skeleton (see bottom)
   - Collection
   - View
 
-Branding
+# Branding
   - Logo
   - Favicon
   - Landing Page
   - Github Repo
 
-Collections
+# Collections
   - Notice "[foo]Id" pattern and automatically add "by[Foo]" view
   - All Collections should be Event Emitters
   - Pagination on lookups
@@ -26,21 +27,21 @@ Collections
     - Lng
     - Geospatial search
 
-Social
+# Social
   - Better Facebook integration (friends, friendsOfFriends, share)
   - Twitter (login/OAuth, followers, following, generate profile/intent/avatar links)
   - Google+ (login/OAuth, contacts, share, generate profile/intent/avatar links)
   - Gravatar integration
 
 
-Multitenant
+# Multitenant
   - Probably should make Silo.js for management
   - Auth integration
   - Magically use appropriate DB for collection lookups
   - Dependency Injection (userDb)
   - `db: 'someDb'` option for all collection lookups
 
-Admin Panel
+# Admin Panel
   - Default "Admin" group
   - Gamma Grids for all collections w/CRUD+search support
   - Special Nav w/links to analytics/grids
@@ -48,14 +49,6 @@ Admin Panel
   - Email Addresses
   - CMS
   - Email Templates
-  - Whiteboard
-    - Bug Report
-    - Feature Proposal
-    - YouTrack
-      - Link to project
-      - Open issues
-      - Notify when issue moves to QA/Resolved
-    - Pay Invoice
   - Analytics
     - Signups (day, week, month, year)
     - Collection metrics (d/w/m/y) 
@@ -63,11 +56,12 @@ Admin Panel
     - Google Analytics highlights
   - Logs
 
-Logging
+# Logging
   - Pick a logging library
   - Attach to a bunch of events
+  - Request-level logging
 
-Payments
+# Payments
   - Stripe API integration
   - Subscriptions
   - Purchases
@@ -82,7 +76,7 @@ Payments
   - Trials
   - Lockout
 
-Email
+# Email
   - Mandrill integration
   - Forgot Password
   - Email Confirmation
@@ -92,23 +86,26 @@ Email
   - All notifications can accept arrays of IDs
   - All notifications mix calling object into template data
 
-Search
+# Search
   - ElasticSearch integration
   - Collection#search
   - Pagination
 
-Plugins
-  - Use-case: Common features (like CMS), API integrations
-  - Consumable as node module
-  - plugin.css
-  - plugin.js
-  - View object (bogart_handlebars)
-  - Middleware
-  - Collections
-  - Services
+# Plugins
+  - **DONE:** See `./lib/plugin.js`
+  - Example implementation in `./cms`
+  - ~~Use-case: Common features (like CMS), API integrations~~
+  - ~~Consumable as node module~~
+  - ~~plugin.css~~
+  - ~~plugin.js~~
+  - ~~View object (bogart_handlebars)~~
+  - ~~Middleware~~
+  - ~~Collections~~
+  - ~~Services~~
   - Plugin Repository
 
-Sherpa
+# Sherpa
+  - Front-end companion library
   - Cannibalize Hello.js for OAuth
   - Magic "Login With [network]" buttons
   - Cannibalize GammaGrid, FW, Dropzone, SmoothScroll, Rivets
@@ -128,7 +125,8 @@ Sherpa
     - Page size dropdown (already in?)
     - Ajax
 
-REST
+# REST
+  - Magically generated API + HTML CRUD routes
   - Declared on collection
   - Full CRUD support
   - Always `use`d last so can easily overridden
@@ -145,8 +143,8 @@ REST
     - {it: 'failed', reason: 'User-friendly message', err: Error}
   - Pagination support for list (?page=&size=)
 
-Dependency Injection
-  - If /collection-name/:id pattern, fetch it and dependency inject it as collectionNameCamelCased
+# Dependency Injection
+  - If /collection-name/:id pattern, fetch it and dependency inject it as collectionNameCamelCased (e.g. `/group/1234` injects group with _id "1234" as `group`)
   - Automatically inject
     - user
     - session
@@ -162,8 +160,6 @@ Dependency Injection
     - Routes
     - Event handlers
     - Collection class/instance methods
-
-
 
 # Skeleton
 .git/
