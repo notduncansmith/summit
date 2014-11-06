@@ -1,4 +1,4 @@
-var slugify = require('./services')().slugify;
+var inflection = require('inflection');
 
 module.exports = function (app) {
   return {

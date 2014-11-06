@@ -1,7 +1,7 @@
 var slugify = require('./services')().slugify;
 
-module.exports = function () {
-  var Post = {
+module.exports = function (app) {
+  return app.collection({
     name: 'Post',
     isPostType: true,
     timestamps: true,
@@ -23,5 +23,5 @@ module.exports = function () {
         return this.save();
       }
     }
-  };
+  });
 }

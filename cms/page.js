@@ -1,7 +1,7 @@
-var inflection = require('inflection');
+var slugify = require('./services')().slugify;
 
 module.exports = function (app) {
-  var Page = {
+  return app.collection({
     name: 'Page',
     isPostType: true,
     timestamps: true,
@@ -28,5 +28,5 @@ module.exports = function (app) {
         return this.save();
       }
     }
-  };
+  });
 }
