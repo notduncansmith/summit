@@ -1,6 +1,9 @@
 # Documentation
 Anything would be nice.
 
+# Testing
+The current tests are based on an old iteration of the framework so they will need to be tweaked a bit to work.  After that, we should start working towards actual test coverage.
+
 # Yeoman Generators
   - Skeleton (see bottom)
   - Collection
