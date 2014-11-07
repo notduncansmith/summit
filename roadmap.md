@@ -13,7 +13,7 @@ The current tests are based on an old iteration of the framework so they will ne
   - Logo
   - Favicon
   - Landing Page
-  - Github Repo
+  - ~~Github Repo~~
 
 # Collections
   - Notice "[foo]Id" pattern and automatically add "by[Foo]" view
