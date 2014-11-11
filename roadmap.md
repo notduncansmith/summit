@@ -20,6 +20,7 @@ The current tests are based on an old iteration of the framework so they will ne
   - All Collections should be Event Emitters
   - Pagination on lookups
   - Class methods
+  - All `find` methods should return instances of Item (right now just returning raw data)
   - Instance methods
   - Computed properties (getter/setter implementation, API may take some thought)
   - Location
