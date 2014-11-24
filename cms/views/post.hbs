@@ -1,5 +1,17 @@
-<h1>I'm a post page!</h1>
+{{#extend "layout"}}
+{{#replace "body"}}
 
-{{#posts}}
-  <h1>{{title}}</h1>
-{{/posts}}
+<h1>Page :: Edit</h1>
+
+<form method="post">
+	{{#post}}
+	<input type="hidden" name="id" value="{{_id}}"/>
+	<input type="text" name="slug" value="{{slug}}" placeholder="/path/to/resource" />
+	<input type="title" name="title" class="form-control" value="{{title}}" placeholder="Page Title"/>
+	<textarea name="body" placeholder="Page Content">{{body}}</textarea>
+ 	
+	<input type="submit" value="Save"/>
+	{{/post}}
+</form>
+{{/replace}}
+{{/extend}}
