@@ -24,6 +24,7 @@ See [roadmap.md](https://github.com/notduncansmith/summit/blob/master/roadmap.md
 - [Scott Dodge](https://github.com/scotato)
 - [Nicole Whitehead](https://github.com/ncwhitehead)
 - [David Johnson](https://github.com/djohn0)
+- [Martin Murphy](https://github.com/soitgoes)
 
 Special thanks to [Nathan Stott](https://github.com/nrstott), author of [Bogart](https://github.com/nrstott/bogart) which powers Summit's core.
 
@@ -31,5 +32,5 @@ Special thanks to [Nathan Stott](https://github.com/nrstott), author of [Bogart]
 
 Summit would not be possible without the help of lovely sponsors like these guys:
 
-[Whiteboard](http://whiteboard-it.com), a development agency in Alabama.
-[Splitts](http://splitts.com), a startup you'll be hearing about soon.
+- [Whiteboard](http://whiteboard-it.com), a development agency in Alabama.
+- [Splitts](http://splitts.com), a startup you'll be hearing about soon.
