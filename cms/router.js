@@ -68,5 +68,15 @@ module.exports = function (app) {
     });
   });
 
+  //Serves all html content
+  router.get(/.*/, function (req, Page, views, respond){
+    return Page.view('bySlug', {key:req.pathInfo}).then(function (results){
+      if (results.length ===0){
+        return respond(views.not_found, {status:404});
+      }
+      return respond(views.view_page, results[0]);
+    })
+  })
+
   return router;
 }

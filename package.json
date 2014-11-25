@@ -27,7 +27,8 @@
     "moment": "~2.6.0",
     "mustache": "~0.8.2",
     "nano": "~5.11.0",
-    "node-uuid": "~1.4.1"
+    "node-uuid": "~1.4.1",
+    "tinymce": "~4.1.6"
   },
   "license": "MIT"
 }
