@@ -14,4 +14,9 @@
 	{{/page}}
 </form>
 {{/replace}}
+
+{{#append "scripts"}}
+<script src="/content/tinymce/tinymce.min.js"></script>
+<script>tinymce.init({selector:'textarea'});</script>
+{{/append}}
 {{/extend}}
