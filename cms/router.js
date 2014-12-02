@@ -1,4 +1,5 @@
-var Summit = require('../app');
+var Summit = require('../app'),
+    moment = require('moment')
 
 module.exports = function (app) {
   var router = app.router();
@@ -18,6 +19,8 @@ module.exports = function (app) {
   })
   router.get('/page/:id', function (req, Page, views, respond){
     return Page.get(req.params.id).then(function(page){
+      page.createdAt = moment(page.createdAt).fromNow();
+      page.updatedAt = moment(page.updatedAt).fromNow();
       return respond(views.page, {page:page});
     })
   })
@@ -54,7 +57,7 @@ module.exports = function (app) {
   router.post('/post', savePost);
   router.post('/post/:id', savePost);
   router.get('/post/:id', function (req, Post, views, respond){
-    return Post.get(req.params.id).then(function(post){
+    return Post.get(req.params.id).then(function(post){      
       return respond(views.post, {post:post})
     })
   })
@@ -70,8 +73,9 @@ module.exports = function (app) {
 
   //Serves all html content
   router.get(/.*/, function (req, Page, views, respond){
-    return Page.view('bySlug', {key:req.pathInfo}).then(function (results){
-      if (results.length ===0){
+    var slug = req.pathInfo.slice(1);
+    return Page.view('bySlug', {key: slug}).then(function (results){
+      if (results.length === 0){
         return respond(views.not_found, {status:404});
       }
       return respond(views.view_page, results[0]);
