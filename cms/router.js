@@ -1,5 +1,7 @@
-var Summit = require('../app'),
-    moment = require('moment')
+var Summit = require('../app')
+  , uuid = require('uuid')
+  , moment = require('moment')
+  , path = require('path');
 
 module.exports = function (app) {
   var router = app.router();
@@ -45,19 +47,33 @@ module.exports = function (app) {
     })
   })
 
-  var savePost = function (req, uuid, _, Post){
-    return Post.get(req.params.id).then(function(post){
-      post = post._id ? post : {_id: uuid()};
-      post = _.extend(post, req.params);
-      return Post.put(post).then(function(result){
-        return Summit.redirect('/posts')
-      })   
+  var savePost = function (req, _, Post, app){
+    return Post.get(req.params._id).then(function (post){
+
+      post = post._id ? post : {_id:uuid.v4()};
+      var params = req.params;
+
+      if (params.featureImg === '') {
+        params = _.omit(params, ['featureImg']);
+        post = _.extend(post, params);
+      } else {
+        post = _.extend(post, params);
+        post.featureImg = path.basename(params.featureImg); 
+      }
+
+      return Post.put(post)
+      .then(function () {
+        return app.db.attach(post._id, req.body.featureImg).then(function(){
+          return Summit.redirect('/posts');  
+        })
+      });    
     })
   }
+
   router.post('/post', savePost);
-  router.post('/post/:id', savePost);
-  router.get('/post/:id', function (req, Post, views, respond){
-    return Post.get(req.params.id).then(function(post){      
+  router.post('/post/:_id', savePost);
+  router.get('/post/:_id', function (req, Post, views, respond){
+    return Post.get(req.params._id).then(function(post){      
       return respond(views.post, {post:post})
     })
   })
