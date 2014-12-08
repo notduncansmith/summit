@@ -72,11 +72,18 @@ module.exports = function (app) {
   });
 
   //Serves all html content
-  router.get(/.*/, function (req, Page, views, respond){
+  router.get(/.*/, function (req, Page, Post, views, respond){
     var slug = req.pathInfo.slice(1);
-    return Page.view('bySlug', {key: slug}).then(function (results){
+    return Page.view('bySlug', {key: slug})
+    .then(function (results){
       if (results.length === 0){
-        return respond(views.not_found, {status:404});
+        return Post.view('bySlug', {key: slug})
+        .then(function (results){
+          if (results.length === 0){
+            return respond(views.not_found, {status:404});
+          }
+          return respond(views.view_post, results[0])
+        });
       }
       return respond(views.view_page, results[0]);
     })

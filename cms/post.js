@@ -17,6 +17,25 @@ module.exports = function (app) {
       }
     },
 
+    design: {
+      views: {
+        bySlug: {
+          map: function (doc) {
+            if (doc.collection == 'Post' && doc.slug) {
+              emit(doc.slug, doc);
+            }
+          }
+        },
+        by_createdAt: {
+          map: function(doc){
+            if (doc.collection == 'Post'){
+              emit(doc.createdAt, null)
+            }
+          }
+        }
+      }
+    },
+
     instanceMethods: {
       publish: function () {
         this.published = true;
