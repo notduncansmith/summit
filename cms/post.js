@@ -26,10 +26,10 @@ module.exports = function (app) {
             }
           }
         },
-        by_createdAt: {
-          map: function(doc){
-            if (doc.collection == 'Post'){
-              emit(doc.createdAt, null)
+        byPublish: {
+          map: function (doc) {
+            if (doc.collection == 'Post' && doc.publishedAt) {
+              emit(doc.publishedAt, doc);
             }
           }
         }
