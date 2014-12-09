@@ -29,7 +29,7 @@ module.exports = function (app) {
         by_publishedAtYMD: {
           map: function (doc) {
             if (doc.collection == 'Post' && doc.publishedAtYMD) {
-              emit(doc.publishedAtYMD, null);
+              emit(doc.publishedAtYMD, doc);
             }
           }
         }
