@@ -39,7 +39,7 @@ The current tests are based on an old iteration of the framework so they will ne
 
 
 # Multitenant
-  - Probably should make Silo.js for management
+  - Probably should make Silo.js for management (API will take some thought)
   - Auth integration
   - Magically use appropriate DB for collection lookups
   - Dependency Injection (userDb)
@@ -81,8 +81,8 @@ The current tests are based on an old iteration of the framework so they will ne
   - Lockout
 
 # Email
-  - Mandrill integration
-  - Forgot Password
+  - ~~Mandrill integration~~
+  - ~~Forgot Password~~
   - Email Confirmation
   - User.notify(), User#notify
   - Group.notify(), Group#notify
@@ -90,10 +90,10 @@ The current tests are based on an old iteration of the framework so they will ne
   - All notifications can accept arrays of IDs
   - All notifications mix calling object into template data
 
-# Search
-  - ElasticSearch integration
-  - Collection#search
-  - Pagination
+# ~~Search~~
+  - ~~ElasticSearch integration~~
+  - ~~Collection#search~~
+  - ~~Pagination~~
 
 # Plugins
   - **DONE:** See `./lib/plugin.js`
@@ -130,10 +130,11 @@ The current tests are based on an old iteration of the framework so they will ne
     - Ajax
 
 # REST
-  - Magically generated API + HTML CRUD routes
-  - Declared on collection
-  - Full CRUD support
-  - Always `use`d last so can easily overridden
+  - ~~Magically generated API routes~~
+  - Magically generated HTML routes
+  - ~~Declared on collection~~
+  - ~~Full CRUD support~~
+  - ~~Always `use`d last so can easily overridden~~
   - Template convetion: views/collection_name/action.hbs (create, read, update, delete, _read)
   - Default template if template not available (use form generation)
   - Routes (prepend with "/collection-name")
@@ -141,7 +142,7 @@ The current tests are based on an old iteration of the framework so they will ne
     - Read: GET /:id, GET /all
     - Update: POST /:id
     - Delete: POST /:id/delete
-  - API routes
+  - ~~API routes~~
     - Default {prefix: '/api', version: true}
     - {it: 'worked', result: APIResult, data: Item}
     - {it: 'failed', reason: 'User-friendly message', err: Error}
@@ -150,18 +151,19 @@ The current tests are based on an old iteration of the framework so they will ne
 # Dependency Injection
   - If /collection-name/:id pattern, fetch it and dependency inject it as collectionNameCamelCased (e.g. `/group/1234` injects group with _id "1234" as `group`)
   - Automatically inject
-    - user
-    - session
-    - app
-    - Collections
-    - Facebook
-    - Twitter
+    - ~~user~~
+    - ~~session~~
+    - ~~app~~
+    - ~~Collections~~
+    - ~~Facebook~~
+    - ~~Twitter~~
     - Google+
     - Google Maps
-    - US States
-    - Countries
+    - Data
+      - US States
+      - Countries
   - Inject into
-    - Routes
+    - ~~Routes~~
     - Event handlers
     - Collection class/instance methods
 
