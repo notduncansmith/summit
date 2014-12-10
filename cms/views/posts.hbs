@@ -1,0 +1,16 @@
+<h1>Posts...</h1>
+
+
+<!-- To be replaced with gamma grid //-->
+<div class="row">
+  <div class="col-md-12">
+    <a href="/post">Create Post</a>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+{{#posts}}
+  <a href="/post/{{_id}}">{{title}}</a>
+{{/posts}}
+  </div>
+</div>

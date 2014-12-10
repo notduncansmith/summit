@@ -19,7 +19,15 @@ module.exports = function (app) {
     },
 
     design: {
-
+      views: {
+        bySlug: {
+          map: function (doc) {
+            if (doc.collection == 'Page' && doc.slug) {
+              emit(doc.slug, doc);
+            }
+          }
+        }
+      }
     },
 
     instanceMethods: {
