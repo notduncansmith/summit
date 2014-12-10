@@ -1,31 +1,32 @@
-var Summit = require('./app')
-  , CMS;
-
-var dbConfig = {
-  name: 'summit',
-  host: 'localhost',
-  port: 5984
-};
+var Summit = require('./app');
 
 var app = new Summit();
 var router = app.router();
 
-CMS = require('./cms')(app);
-
-router.get('/used', function (req) {
-  return Summit.cors({from: 'used'});
+var User = app.collection({
+  name: 'User',
+  restful: true,
+  fields: {}
 });
 
-router.get('/api/post/:id', function (Post) {
-  return Post.get(req.params.id)
-  .then(function (post) {
-    return Summit.json(post);
-  });
-});
-
-app.router(true)
-.get('/', function () {
+router.get('/', function () {
   return Summit.text('Hello, world!');
 });
+
+router.get('/user/new', function (User, respond, views) {
+  var form = User.form();
+  var locals = {form: form};
+
+  return respond(views.hello, locals);
+});
+
+// router.post('/user/new', function (req, User, respond, views) {
+//   var name = req.params.name;
+
+//   return User.put({name: name})
+//   .then(function (result) {
+//     return Summit.json(result);
+//   });
+// });
 
 app.start();
