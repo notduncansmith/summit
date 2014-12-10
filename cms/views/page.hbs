@@ -1,22 +1,87 @@
-{{#extend "layout"}}
+{{#extend "cms_layout"}}
 {{#replace "body"}}
+<div class="container">
+  {{#unless _id}}<h1>Create Page</h1>{{/unless}}
+  {{#if _id}}<h1>Edit Page</h1>{{/if}}
+  <form method="post">
+    {{#page}}
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="title">Page Title</label>
+          <input
+            type="text"
+            name="title"
+            id="title"
+            value="{{title}}"
+            placeholder="Page Title"
+            class="form-control"
+          />
+        </div>
+      </div>
 
-<h1>Page :: Edit</h1>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="slug">Page Slug</label>
+          <input
+            type="text"
+            name="slug"
+            id="slug"
+            value="{{slug}}"
+            placeholder="path-to-resource"
+            class="form-control"
+          />
+        </div>
+      </div>
+    </div>
 
-<form method="post">
-	{{#page}}
-	<input type="hidden" name="id" value="{{_id}}"/>
-	<input type="text" name="slug" value="{{slug}}" placeholder="/path/to/resource" />
-	<input type="title" name="title" class="form-control" value="{{title}}" placeholder="Page Title"/>
-	<textarea name="body" placeholder="Page Content">{{body}}</textarea>
- 	
-	<input type="submit" value="Save"/>
-	{{/page}}
-</form>
+    <div class="form-group">
+      <textarea
+        name="body"
+        rows="10"
+        placeholder="Page Content"
+        class="form-control">{{body}}</textarea>
+    </div>
+
+    <input type="hidden" name="_id" value="{{_id}}"/>
+    <div class="row">
+      <div class="col-md-3 col-sm-6">
+        <input
+          type="submit"
+          {{#unless _id}}value="Save"{{/unless}}
+          {{#if _id}}value="Update"{{/if}}
+          class="btn btn-primary btn-block"
+        />
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <a href="/pages" class="btn btn-default btn-block">Cancel</a>
+      </div>
+    </div>
+    {{/page}}
+  </form>
+</div>
 {{/replace}}
 
 {{#append "scripts"}}
 <script src="/content/tinymce/tinymce.min.js"></script>
-<script>tinymce.init({selector:'textarea'});</script>
+<script>
+  //Convert title to slug if one does not exist
+  $("#title").blur(function(){
+    if ($("#slug").val() === ""){
+      $("#slug").val(this.value.replace(/[^a-zA-Z0-9 \/]/g, "").replace(/\s/g, "-").toLowerCase().substring(0,30));
+    }
+  })
+
+  //Initialize tinymce
+  tinymce.init({
+    selector:'textarea'
+  , body_class: 'tinymceBody'
+  , plugins: [
+         "advlist autolink link image lists charmap preview hr anchor",
+         "searchreplace wordcount visualblocks visualchars code insertdatetime media",
+         "table contextmenu paste textcolor"
+    ]
+  });
+</script>
 {{/append}}
 {{/extend}}

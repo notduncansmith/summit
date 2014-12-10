@@ -96,7 +96,7 @@ module.exports = function (app) {
   }
 
   function savePage (req, uuid, _, Page) {
-    return Page.get(req.params.id)
+    return Page.get(req.params._id)
     .then(function (page) {
       page = page._id ? page : {_id: uuid()};
       page = _.extend(page, req.params);
