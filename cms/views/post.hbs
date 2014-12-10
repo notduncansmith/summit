@@ -5,12 +5,12 @@
 
 <form method="post">
 	{{#post}}
-	<input type="hidden" name="id" value="{{_id}}"/>
-	<input type="text" name="slug" value="{{slug}}" placeholder="/path/to/resource" />
-	<input type="title" name="title" class="form-control" value="{{title}}" placeholder="Page Title"/>
-	<textarea name="body" placeholder="Page Content">{{body}}</textarea>
- 	
-	<input type="submit" value="Save"/>
+  	<input type="hidden" name="_id" value="{{_id}}"/>
+  	<input type="text" name="slug" value="{{slug}}" placeholder="/path/to/resource" />
+  	<input type="title" name="title" class="form-control" value="{{title}}" placeholder="Page Title"/>
+  	<textarea name="body" placeholder="Page Content">{{body}}</textarea>
+
+  	<input type="submit" value="Save"/>
 	{{/post}}
 </form>
 {{/replace}}
