@@ -26,14 +26,15 @@ module.exports = function (app) {
 
   router.get('/pages', function (Page, respond, views){
     return Page.all()
-    .then(function(result){
+    .then(function (result) {
       return respond(views.pages, {pages:result});
     });
   });
 
   router.get('/post/:_id', function (req, Post, views, respond){
     return Post.get(req.params._id)
-    .then(function(post){
+    .then(function (post) {
+      console.log(post)
       return respond(views.post, {post:post});
     });
   });
@@ -87,10 +88,14 @@ module.exports = function (app) {
 
       return Post.put(post)
       .then(function () {
-        return app.db.attach(post._id, req.body.featureImg)
-        .then(function(){
-          return Summit.redirect('/posts');
-        });
+        if (req.body.featureImg){
+          return app.db.attach(post._id, req.body.featureImg)
+          .then(function(){
+            return Summit.redirect('/posts');
+          });
+        }
+
+        return Summit.redirect('/posts');
       });
     });
   }

@@ -1,8 +1,8 @@
 {{#extend "cms_layout"}}
 {{#replace "body"}}
 <div class="container">
-  {{#unless _id}}<h1>Create Post</h1>{{/unless}}
-  {{#if _id}}<h1>Edit Post</h1>{{/if}}
+  {{#unless post}}<h1>Create Post</h1>{{/unless}}
+  {{#if post}}<h1>Edit Post</h1>{{/if}}
   <form method="post">
   	{{#post}}
     <div class="row">
@@ -48,8 +48,8 @@
       <div class="col-md-3 col-sm-6">
         <input
           type="submit"
-          {{#unless _id}}value="Save"{{/unless}}
-          {{#if _id}}value="Update"{{/if}}
+          {{#unless post}}value="Save"{{/unless}}
+          {{#if post}}value="Update"{{/if}}
           class="btn btn-primary btn-block"
         />
       </div>
