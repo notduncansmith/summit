@@ -1,16 +1,20 @@
-<h1>Posts...</h1>
+{{#extend "cms_layout"}}
+{{#replace "body"}}
+<div class="container">
+  <h1>Posts</h1>
 
+  <table class="table table-striped">
+    <tbody>
+      {{#posts}}
+      <tr>
+        <td><a href="{{slug}}">{{title}}</a></td>
+        <td><a href="/post/{{_id}}">Edit</a></td>
+      </tr>
+      {{/posts}}
+    </tbody>
+  </table>
 
-<!-- To be replaced with gamma grid //-->
-<div class="row">
-  <div class="col-md-12">
-    <a href="/post">Create Post</a>
-  </div>
+  <a href="/post" class="btn btn-primary">Create Post</a>
 </div>
-<div class="row">
-  <div class="col-md-12">
-{{#posts}}
-  <a href="/post/{{_id}}">{{title}}</a>
-{{/posts}}
-  </div>
-</div>
+{{/replace}}
+{{/extend}}
