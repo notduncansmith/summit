@@ -4,8 +4,7 @@
   "description": "A web framework for achievers",
   "main": "app.js",
   "scripts": {
-    "test": "jasmine-node --color spec/",
-    "autotest": "jasmine-node --color --captureExceptions --autotest spec/"
+    "lint": "jshint --exclude-path=.gitignore ."
   },
   "author": "Duncan Smith",
   "devDependencies": {},
