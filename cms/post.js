@@ -26,6 +26,13 @@ module.exports = function (app) {
             }
           }
         },
+        by_slug: {
+          map: function (doc) {
+            if (doc.collection == 'Post' && doc.slug) {
+              emit(doc.slug, doc);
+            }
+          }
+        },
         by_publishedAtYMD: {
           map: function (doc) {
             if (doc.collection == 'Post' && doc.publishedAtYMD) {
