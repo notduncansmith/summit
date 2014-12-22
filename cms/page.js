@@ -22,7 +22,7 @@ module.exports = function (app) {
       views: {
         bySlug: {
           map: function (doc) {
-            if (doc.collection == 'Page' && doc.slug) {
+            if (doc.collection === 'Page' && doc.slug) {
               emit(doc.slug, doc);
             }
           }
@@ -44,4 +44,4 @@ module.exports = function (app) {
       }
     }
   });
-}
+};

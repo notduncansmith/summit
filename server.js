@@ -3,22 +3,22 @@ var Summit = require('./app');
 var app = new Summit();
 var router = app.router();
 
-var User = app.collection({
-  name: 'User',
-  restful: true,
-  fields: {}
-});
+// var User = app.collection({
+//   name: 'User',
+//   restful: true,
+//   fields: {}
+// });
 
 router.get('/', function () {
   return Summit.text('Hello, world!');
 });
 
-router.get('/user/new', function (User, respond, views) {
-  var form = User.form();
-  var locals = {form: form};
+// router.get('/user/new', function (User, respond, views) {
+//   var form = User.form();
+//   var locals = {form: form};
 
-  return respond(views.hello, locals);
-});
+//   return respond(views.hello, locals);
+// });
 
 // router.post('/user/new', function (req, User, respond, views) {
 //   var name = req.params.name;

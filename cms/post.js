@@ -21,7 +21,7 @@ module.exports = function (app) {
       views: {
         bySlug: {
           map: function (doc) {
-            if (doc.collection == 'Post' && doc.slug) {
+            if (doc.collection === 'Post' && doc.slug) {
               emit(doc.slug, doc);
             }
           }
@@ -35,7 +35,7 @@ module.exports = function (app) {
         },
         by_publishedAtYMD: {
           map: function (doc) {
-            if (doc.collection == 'Post' && doc.publishedAtYMD) {
+            if (doc.collection === 'Post' && doc.publishedAtYMD) {
               emit(doc.publishedAtYMD, doc);
             }
           }
@@ -50,4 +50,4 @@ module.exports = function (app) {
       }
     }
   });
-}
+};

@@ -34,6 +34,7 @@ module.exports = function (app) {
   router.get('/post/:_id', function (req, Post, views, respond){
     return Post.get(req.params._id)
     .then(function (post) {
+      console.log(post);
       return respond(views.post, {post:post});
     });
   });
@@ -113,4 +114,4 @@ module.exports = function (app) {
   }
 
   return router;
-}
+};
