@@ -2,6 +2,8 @@
 
 A Node.js Web Framework For Achievers
 
+[![Code Climate](https://codeclimate.com/github/notduncansmith/summit/badges/gpa.svg)](https://codeclimate.com/github/notduncansmith/summit)
+
 ## Installation
 
 ```
