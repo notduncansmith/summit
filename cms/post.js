@@ -17,6 +17,25 @@ module.exports = function (app) {
       }
     },
 
+    design: {
+      views: {
+        bySlug: {
+          map: function (doc) {
+            if (doc.collection === 'Post' && doc.slug) {
+              emit(doc.slug, doc);
+            }
+          }
+        },
+        by_publishedAtYMD: {
+          map: function (doc) {
+            if (doc.collection === 'Post' && doc.publishedAtYMD) {
+              emit(doc.publishedAtYMD, doc);
+            }
+          }
+        }
+      }
+    },
+
     instanceMethods: {
       publish: function () {
         this.published = true;
@@ -24,4 +43,4 @@ module.exports = function (app) {
       }
     }
   });
-}
+};

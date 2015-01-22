@@ -1,7 +1,20 @@
+{{#extend "cms_layout"}}
+{{#replace "body"}}
+<div class="container">
+  <h1>Pages</h1>
 
-<!-- To be replaced with gammagrid and api call //-->
+  <table class="table table-striped">
+    <tbody>
+      {{#pages}}
+      <tr>
+        <td><a href="{{slug}}">{{title}}</a></td>
+        <td><a href="/page/{{_id}}">Edit</a></td>
+      </tr>
+      {{/pages}}
+    </tbody>
+  </table>
 
-<a href="/page">New Page</a>
-{{#pages}}
-	<a href="/page/{{_id}}">{{title}}</a>
-{{/pages}}
+  <a href="/page" class="btn btn-primary">Create Page</a>
+</div>
+{{/replace}}
+{{/extend}}
