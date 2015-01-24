@@ -60,7 +60,7 @@ module.exports = function (app) {
         return Post.view('bySlug', {key: slug})
         .then(function (results) {
           if (results.length === 0) {
-            return respond(views.not_found, {status:404});
+            return respond(views.not_found, {}, {status:404});
           }
 
           return respond(views.view_post, results[0]);

@@ -26,6 +26,13 @@ module.exports = function (app) {
               emit(doc.slug, doc);
             }
           }
+        },
+        by_slug: {
+          map: function (doc) {
+            if (doc.collection == 'Page' && doc.slug) {
+              emit(doc.slug, doc);
+            }
+          }
         }
       }
     },
