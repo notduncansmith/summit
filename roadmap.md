@@ -37,6 +37,13 @@ The current tests are based on an old iteration of the framework so they will ne
   - Google+ (login/OAuth, contacts, share, generate profile/intent/avatar links)
   - Gravatar integration
 
+# Controllers
+- Controller#beforeEach
+- Controller#routeFor
+- Controller#restful
+- Controller#autoRoute
+- Controller#router
+- Dependency-injected
 
 # Multitenant
   - Probably should make Silo.js for management (API will take some thought)
@@ -55,7 +62,7 @@ The current tests are based on an old iteration of the framework so they will ne
   - Email Templates
   - Analytics
     - Signups (day, week, month, year)
-    - Collection metrics (d/w/m/y) 
+    - Collection metrics (d/w/m/y)
     - Revenue (d/w/m/y)
     - Google Analytics highlights
   - Logs
