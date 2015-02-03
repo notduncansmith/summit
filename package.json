@@ -28,7 +28,8 @@
     "moment": "=2.6.0",
     "mustache": "=0.8.2",
     "nano": "=5.11.0",
-    "node-uuid": "=1.4.1"
+    "node-uuid": "=1.4.1",
+    "pouchdb": "^3.2.1"
   },
   "license": "MIT"
 }
