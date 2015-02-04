@@ -1,3 +1,5 @@
+
+
 # Documentation
 Anything would be nice.
 
@@ -16,8 +18,9 @@ The current tests are based on an old iteration of the framework so they will ne
   - ~~Github Repo~~
 
 # Collections
+  - Use `type` instead of `collection` (if `collection` is detected, and matches collection name, warn)
   - Notice "[foo]Id" pattern and automatically add "by[Foo]" view
-  - All Collections should be Event Emitters
+  - All Collections should be Event Emitters and emit CRUD by default
   - Pagination on lookups
   - Class methods
   - All `find` methods should return instances of Item (right now just returning raw data)
@@ -31,11 +34,34 @@ The current tests are based on an old iteration of the framework so they will ne
     - Lng
     - Geospatial search
 
+# Deprecation Warning
+  - Summit._deprecate
+  - Decorate function with console.warn, deprication notice (includes name + message)
+
+# User
+ - Invite user by email
+ - Security Questions
+ - Events:
+  - Register (should already be implemented a la "create")
+  - Login
+  - Failed login
+  - Password reset
+
+# Routing
+  - Rate-limit
+    - Global or by-route
+    - By IP
+    - By session
+
 # Social
   - Better Facebook integration (friends, friendsOfFriends, share)
   - Twitter (login/OAuth, followers, following, generate profile/intent/avatar links)
   - Google+ (login/OAuth, contacts, share, generate profile/intent/avatar links)
   - Gravatar integration
+
+# Database
+  - Driver-ify database access
+  - PouchDB search
 
 
 # Multitenant
@@ -55,7 +81,7 @@ The current tests are based on an old iteration of the framework so they will ne
   - Email Templates
   - Analytics
     - Signups (day, week, month, year)
-    - Collection metrics (d/w/m/y) 
+    - Collection metrics (d/w/m/y)
     - Revenue (d/w/m/y)
     - Google Analytics highlights
   - Logs
