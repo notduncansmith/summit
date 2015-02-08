@@ -4,3 +4,6 @@ couch/
 local.sh
 start
 npm-debug.log
+config.json
+log.txt
+.pouch_*
