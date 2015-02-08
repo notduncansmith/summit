@@ -15,9 +15,9 @@
     "bogart-injector": "=0.2.1",
     "cheerio": "=0.17.0",
     "elasticsearch": "=3.0.1",
-    "express": "^4.11.2",
-    "express-pouchdb": "^0.14.0",
-    "faker": "^2.1.2",
+    "express": "=4.11.2",
+    "express-pouchdb": "=0.14.0",
+    "faker": "=2.1.2",
     "fbgraph": "=0.2.11",
     "handlebars": "=2.0.0-alpha.2",
     "handlebars-layouts": "=0.2.0",
@@ -25,6 +25,7 @@
     "inflection": "=1.4.2",
     "js-beautify": "=1.5.4",
     "keypath": "=0.0.1",
+    "leveldown": "=0.10.4",
     "lodash": "=2.4.1",
     "mandrill-api": "=1.0.40",
     "mime": "=1.2.11",
@@ -32,8 +33,8 @@
     "mustache": "=0.8.2",
     "nano": "=5.11.0",
     "node-uuid": "=1.4.1",
-    "pouchdb": "^3.2.1",
-    "pouchdb-quick-search": "^1.0.2"
+    "pouchdb": "=3.2.1",
+    "pouchdb-quick-search": "=1.0.2"
   },
   "license": "MIT"
 }
