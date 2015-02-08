@@ -17,6 +17,7 @@
     "elasticsearch": "=3.0.1",
     "express": "^4.11.2",
     "express-pouchdb": "^0.14.0",
+    "faker": "^2.1.2",
     "fbgraph": "=0.2.11",
     "handlebars": "=2.0.0-alpha.2",
     "handlebars-layouts": "=0.2.0",
