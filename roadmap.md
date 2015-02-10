@@ -65,9 +65,9 @@ The current tests are based on an old iteration of the framework so they will ne
 - Controller#router
 - Dependency-injected
 
-# Database
-  - Driver-ify database access
-  - PouchDB search
+# ~~Database~~
+  - ~~Driver-ify database access~~
+  - ~~PouchDB search~~
 
 # Multitenant
   - Probably should make Silo.js for management (API will take some thought)
