@@ -1,5 +1,3 @@
-
-
 # Documentation
 Anything would be nice.
 
@@ -59,10 +57,17 @@ The current tests are based on an old iteration of the framework so they will ne
   - Google+ (login/OAuth, contacts, share, generate profile/intent/avatar links)
   - Gravatar integration
 
+# Controllers
+- Controller#beforeEach
+- Controller#routeFor
+- Controller#restful
+- Controller#autoRoute
+- Controller#router
+- Dependency-injected
+
 # Database
   - Driver-ify database access
   - PouchDB search
-
 
 # Multitenant
   - Probably should make Silo.js for management (API will take some thought)
