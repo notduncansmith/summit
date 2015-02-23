@@ -1,6 +1,11 @@
 # Documentation
 Anything would be nice.
 
+# Security
+  - Do a full security audit of Summit codebase
+  - Ensure all DB functions are scoped to appropriate collection. Currently, you can read and write any document from any collection. This renders any permissions architecture on a collection useless.
+
+
 # Testing
 The current tests are based on an old iteration of the framework so they will need to be tweaked a bit to work.  After that, we should start working towards actual test coverage.
 
@@ -20,9 +25,12 @@ The current tests are based on an old iteration of the framework so they will ne
   - Notice "[foo]Id" pattern and automatically add "by[Foo]" view
   - All Collections should be Event Emitters and emit CRUD by default
   - Pagination on lookups
-  - Class methods
-  - All `find` methods should return instances of Item (right now just returning raw data)
-  - Instance methods
+  - ~~Class methods~~ Implemented! Pass `methods` to `app.collection()`.
+  - Instance methods (maybe not?)
+  - Security:
+    - `Collection#get` should be modified to read from the `all` view that comes on every collection
+    - An `update` design function should be created to check that a document belongs to the collection modifying it before writing. This should appear on all collections by default.
+    - `Collection#put` should be modified to use said update function.
   - Computed properties (getter/setter implementation, API may take some thought)
   - Location
     - Zip
@@ -94,7 +102,8 @@ The current tests are based on an old iteration of the framework so they will ne
 # Logging
   - Pick a logging library
   - Attach to a bunch of events
-  - Request-level logging
+  - Debug level:
+    - Requests
 
 # Payments
   - Stripe API integration
