@@ -28,17 +28,10 @@ The current tests are based on an old iteration of the framework so they will ne
   - ~~Class methods~~ Implemented! Pass `methods` to `app.collection()`.
   - Instance methods (maybe not?)
   - Security:
-    - `Collection#get` should be modified to read from the `all` view that comes on every collection
+    - `Collection#get` should be modified to read from the `all` view that comes on every collection (this would be a good time to unify the `get` API, right now it's unclear whether any given method will return a single item or an array).
     - An `update` design function should be created to check that a document belongs to the collection modifying it before writing. This should appear on all collections by default.
     - `Collection#put` should be modified to use said update function.
   - Computed properties (getter/setter implementation, API may take some thought)
-  - Location
-    - Zip
-    - City
-    - State
-    - Lat
-    - Lng
-    - Geospatial search
 
 # Deprecation Warning
   - Summit._deprecate
@@ -104,6 +97,15 @@ The current tests are based on an old iteration of the framework so they will ne
   - Attach to a bunch of events
   - Debug level:
     - Requests
+
+# Location Service
+  - Gmaps
+  - Zip
+  - City
+  - State
+  - Lat
+  - Lng
+  - Geospatial search
 
 # Payments
   - Stripe API integration
