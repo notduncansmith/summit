@@ -22,14 +22,14 @@ module.exports = function (app) {
       views: {
         bySlug: {
           map: function (doc) {
-            if (doc.collection === 'Page' && doc.slug) {
+            if (doc.type === 'Page' && doc.slug) {
               emit(doc.slug, doc);
             }
           }
         },
         by_slug: {
           map: function (doc) {
-            if (doc.collection == 'Page' && doc.slug) {
+            if (doc.type == 'Page' && doc.slug) {
               emit(doc.slug, doc);
             }
           }

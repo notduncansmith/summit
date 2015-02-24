@@ -21,21 +21,21 @@ module.exports = function (app) {
       views: {
         bySlug: {
           map: function (doc) {
-            if (doc.collection === 'Post' && doc.slug) {
+            if (doc.type === 'Post' && doc.slug) {
               emit(doc.slug, doc);
             }
           }
         },
         by_slug: {
           map: function (doc) {
-            if (doc.collection == 'Post' && doc.slug) {
+            if (doc.type == 'Post' && doc.slug) {
               emit(doc.slug, doc);
             }
           }
         },
         by_publishedAtYMD: {
           map: function (doc) {
-            if (doc.collection === 'Post' && doc.publishedAtYMD) {
+            if (doc.type === 'Post' && doc.publishedAtYMD) {
               emit(doc.publishedAtYMD, doc);
             }
           }
