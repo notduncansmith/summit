@@ -13,6 +13,10 @@ router.get('/', function () {
   return Summit.text('Hello, world!');
 });
 
+router.get('/:foo', function (req) {
+  return Summit.text('Hello, ' + req.params.foo + '!');
+});
+
 // router.get('/user/new', function (User, respond, views) {
 //   var form = User.form();
 //   var locals = {form: form};
