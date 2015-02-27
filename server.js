@@ -9,6 +9,21 @@ var router = app.router();
 //   fields: {}
 // });
 
+User = app.collections.User;
+
+
+
+router.before(function (req, User) {
+  return User.all()
+  .then(function (users) {
+    console.log('Before', users);
+  });
+});
+
+router.after(function (req) {
+  console.log('After', req.params);
+});
+
 router.get('/', function () {
   return Summit.text('Hello, world!');
 });
