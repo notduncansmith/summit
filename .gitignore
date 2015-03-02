@@ -8,3 +8,4 @@ config.json
 .config.json
 log.txt
 .pouch_*
+.jsonpouch_*
