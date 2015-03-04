@@ -9,3 +9,6 @@ config.json
 log.txt
 .pouch_*
 .jsonpouch_*
+bench.js
+summit.sublime-project
+summit.sublime-workspace
