@@ -1,36 +1,38 @@
 #Configuration
+
 ##Default Options
 Summit is ready to launch directly after download and comes configured with (what we think are) sane defaults. If you are interested in changing the default configuration, a listing of options is below.
 
-###Host
+### `environment`
 * HOSTNAME: 'localhost'
 * PORT: 1337
 * PROTOCOL: 'http'
 * URL: 'http://localhost:1337'
-
-###environment
 * DEVELOPMENT: true
+* APPNAME: 'My Awesome App'
 
-###db
+### `db`
 * DBHOST: 'localhost'
 * DBPORT: 5984
 * DBNAME: 'summit'
 * DBHTTPS: "false"
 * DBAUTH: ''
+* Search
+  * DRIVER: 'pouch'
 * ElasticSearch
   * ESHOST: 'localhost'
   * ESPORT: '9200'
 
-###mandrill
+### Mandrill
 * MANDRILL_API_KEY: ''
 * MANDRILL_FROM_EMAIL: ''
 * MANDRILL_FROM_NAME: ''
 
-###facebook
+### Facebook
 * FB_CLIENT_ID: ''
 * FB_CLIENT_SECRET: ''
 
-###google
+### Google
 * GOOGLE_CLIENT_ID: ''
 
 ##Changing Default Options
