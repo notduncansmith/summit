@@ -1,6 +1,6 @@
 {
   "name": "summit",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "A web framework for achievers",
   "main": "app.js",
   "scripts": {
