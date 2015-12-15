@@ -9,7 +9,7 @@
   "author": "Duncan Smith",
   "devDependencies": {},
   "dependencies": {
-    "bcrypt": "=0.8.0",
+    "bcrypt": "=0.8.5",
     "bluebird": "=2.3.2",
     "bogart-edge": "=0.7.3",
     "bogart-injector": "=0.2.1",
