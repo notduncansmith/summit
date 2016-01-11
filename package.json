@@ -7,9 +7,13 @@
     "lint": "jshint --exclude-path=.gitignore ."
   },
   "author": "Duncan Smith",
-  "devDependencies": {},
+  "devDependencies": {
+    "pouchdb": "=3.2.1",
+    "pouchdb-quick-search": "=1.0.2",
+    "leveldown": "=1.0.7"
+  },
   "dependencies": {
-    "bcrypt": "=0.8.0",
+    "bcrypt-nodejs": "0.0.3",
     "bluebird": "=2.3.2",
     "bogart-edge": "=0.7.3",
     "bogart-injector": "=0.2.1",
@@ -25,7 +29,6 @@
     "inflection": "=1.4.2",
     "js-beautify": "=1.5.4",
     "keypath": "=0.0.1",
-    "leveldown": "=1.0.7",
     "lodash": "=2.4.1",
     "mandrill-api": "=1.0.40",
     "mime": "=1.2.11",
@@ -33,9 +36,7 @@
     "mustache": "=0.8.2",
     "nano": "=5.11.0",
     "node-timer": "=0.3.0",
-    "node-uuid": "=1.4.1",
-    "pouchdb": "=3.2.1",
-    "pouchdb-quick-search": "=1.0.2"
+    "node-uuid": "=1.4.1"
   },
   "license": "MIT"
 }
