@@ -29,7 +29,7 @@
     "inflection": "=1.4.2",
     "js-beautify": "=1.5.4",
     "keypath": "=0.0.1",
-    "lodash": "=2.4.1",
+    "lodash": "=4.3.0",
     "mandrill-api": "=1.0.40",
     "mime": "=1.2.11",
     "moment": "=2.6.0",
