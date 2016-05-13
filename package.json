@@ -10,7 +10,7 @@
   "devDependencies": {
     "pouchdb": "=3.2.1",
     "pouchdb-quick-search": "=1.0.2",
-    "leveldown": "=1.0.7"
+    "leveldown": "=1.4.6"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
