@@ -29,7 +29,7 @@ module.exports = function (app) {
         },
         by_slug: {
           map: function (doc) {
-            if (doc.type == 'Page' && doc.slug) {
+            if (doc.type === 'Page' && doc.slug) {
               emit(doc.slug, doc);
             }
           }
